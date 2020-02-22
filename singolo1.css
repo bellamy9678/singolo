@@ -1,6 +1,4 @@
-/*
 @import url("fonts.css");
-*/
 
 * {
     margin: 0;
@@ -68,6 +66,7 @@ body {
 .options__menu li a {
     text-decoration: none;
     font-size: 1.2rem;
+    font-weight: 700;
     color: #ffffff;
 }
 
@@ -97,7 +96,7 @@ body {
 .mobile_horizontal {
     position: relative;
     top: -71px;
-    right: -121px;
+    right: -122px;
 }
 
 .wrapper_layout-3-box {
@@ -167,6 +166,7 @@ p {
     text-align: justify;
     overflow: hidden;
     text-overflow: hidden;
+    word-break: break-word;
 }
 
 p.services__description {
@@ -192,7 +192,7 @@ h3 {
 }
 
 .services_options {
-    padding-top: 43px;
+    padding-top: 47px;
 }
 
 .services__option {
