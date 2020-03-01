@@ -96,13 +96,13 @@ h3 {
     display: inline-block;
 }
 
-.tags-group__list li a{
+.tags-group__list li a {
     font-size: 1.2rem;
     color: #767e9e;
     font-weight: 400;
     border: 1px solid #666d89;
     border-radius: 5px;
-    padding: 3px 6.5px;
+    padding: 2.5px 6.5px;
     margin-right: 8px;
     text-decoration: none;
     text-transform: capitalize;
@@ -129,4 +129,99 @@ h3 {
     image-rendering: crisp-edges;
 }
 
+.about-us__employees {
+    display: grid;
+    margin-top: 47px;
+    grid-gap: 17px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
+.about-us__employee h3 {
+    margin-top: 9px;
+}
+
+.about-us__employee .employee_adam h3 {
+    margin-top: 10px;
+}
+
+.employee_adam img {
+    margin-left: -2px;
+    width: 304px;
+    height: 303px;
+}
+
+.employee_desmond p {
+    letter-spacing: 0.01rem;
+}
+
+.employee_desmond img {
+    margin-left: -2px;
+}
+
+.social-media-group a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #666d89;
+    border-radius: 50%;
+    background-position: center;
+    margin-right: 5.5px;
+}
+
+.social-media-group {
+    margin-top: 23px;
+    margin-left: 1px;
+}
+
+.employee_desmond .social-media-group {
+    margin-top: 22px;
+}
+
+.employee_scolara .social-media-group {
+    margin-top: 22px;
+}
+
+.facebook {
+    background: url("assets/icons/facebook.svg") no-repeat;
+    background-size: auto 14px;
+}
+
+.google {
+    background: url("assets/icons/google.svg") no-repeat;
+    background-size: auto 14px;
+}
+
+.twitter {
+    background: url("assets/icons/twitter.svg") no-repeat;
+    background-size: auto 12px;
+}
+
+.linkedin {
+    background: url("assets/icons/linkedin.svg") no-repeat;
+    background-size: auto 14px;
+}
+
+.social-media-group a:hover {
+    background-position: center;
+    transition: 0.4s;
+}
+
+.facebook:hover {
+    background: url("assets/icons/facebookHover.svg") no-repeat;
+    background-size: auto 14px;
+}
+
+.google:hover {
+    background: url("assets/icons/googleHover.svg") no-repeat;
+    background-size: auto 14px;
+}
+
+.twitter:hover {
+    background: url("assets/icons/twitterHover.svg") no-repeat;
+    background-size: auto 12px;
+}
+
+.linkedin:hover {
+    background: url("assets/icons/linkedinHover.svg") no-repeat;
+    background-size: auto 14px;
+}
