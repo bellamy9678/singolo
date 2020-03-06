@@ -150,3 +150,93 @@ h3.contact_header {
     background-size: 15px 8px;
     background-position: -1px 8px;
 }
+
+
+.social-media-group a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #666d89;
+    border-radius: 50%;
+    background-position: center;
+    margin-right: 5.5px;
+}
+
+.facebook {
+    background: url("assets/icons/facebook.svg") no-repeat;
+    background-size: auto 14px;
+}
+
+.google {
+    background: url("assets/icons/google.svg") no-repeat;
+    background-size: auto 14px;
+}
+
+.twitter {
+    background: url("assets/icons/twitter.svg") no-repeat;
+    background-size: auto 12px;
+}
+
+.linkedin {
+    background: url("assets/icons/linkedin.svg") no-repeat;
+    background-size: auto 14px;
+}
+
+.social-media-group a:hover {
+    background-position: center;
+    transition: 0.4s;
+}
+
+.facebook:hover {
+    background: url("assets/icons/facebookHover.svg") no-repeat;
+    background-size: auto 14px;
+}
+
+.google:hover {
+    background: url("assets/icons/googleHover.svg") no-repeat;
+    background-size: auto 14px;
+}
+
+.twitter:hover {
+    background: url("assets/icons/twitterHover.svg") no-repeat;
+    background-size: auto 12px;
+}
+
+.linkedin:hover {
+    background: url("assets/icons/linkedinHover.svg") no-repeat;
+    background-size: auto 14px;
+}
+
+h5 {
+    color: #666d89;
+    font-size: 1.2rem;
+    font-weight: 400;
+    max-height: 15px;
+    overflow: hidden;
+    margin-top: -1px;
+}
+
+.footer {
+    height: 77px;
+    background-color: #2d303a;
+    width: 1020px;
+    margin: 0 auto;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 22px;
+    margin-left: 3px;
+}
+
+.footer_social-media-group {
+    display: flex;
+    width: 152px;
+    justify-content: space-between;
+}
+
+.footer_social-media-group a {
+    margin: 0;
+}
