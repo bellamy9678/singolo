@@ -50,7 +50,7 @@ p.get-a-quote__decription {
 }
 
 .get-a-quote__contact {
-    margin-top: 45px;
+    margin-top: 44px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-gap: 11px;
@@ -88,9 +88,13 @@ p.get-a-quote__decription {
 }
 
 .contact-form textarea {
-    height: 193px;
-    padding-top: 10px;
+    height: 202px;
+    margin-top: 1px;
     resize: none;
+}
+
+textarea.contact-form_input::placeholder {
+    padding-top: 10px;
 }
 
 .contact-form_submit {
@@ -98,9 +102,12 @@ p.get-a-quote__decription {
     color: #d6564f;
 }
 
+.contact-form_input[type=email] {
+    margin-top: 1px;
+}
+
 .contact__information {
     margin-left: 10px;
-    margin-top: -2px;
 }
 
 h3.contact_header {
