@@ -480,12 +480,9 @@ p.get-a-quote__decription {
 }
 
 .contact-form textarea {
-    height: 202px;
+    height: 192px;
     margin-top: 1px;
     resize: none;
-}
-
-textarea.contact-form_input::placeholder {
     padding-top: 10px;
 }
 
