@@ -1,7 +1,7 @@
 window.onload = function() {
     
     const MENU = document.querySelector('.options__menu').children;
-
+    
     for (let i = 0; i < MENU.length; i++) {
         MENU[i].onclick = () => {
             for (let j = 0; j < MENU.length; j++) {
@@ -40,6 +40,24 @@ window.onload = function() {
             });
             const CONTAINER = document.querySelector(".portfolio__examples");
             CONTAINER.appendChild(output);
+            setHandlerOnPortfolio();
         }
     }
+    
+    setHandlerOnPortfolio();
+
+    function setHandlerOnPortfolio() {
+        let pictures = document.querySelector('.portfolio__examples').children;
+        
+        for (let i = 0; i < pictures.length; i++) {
+            pictures[i].onclick = () => {
+                for (let j = 0; j < pictures.length; j++) {
+                    pictures[j].classList.remove('img-selected');
+                }
+                pictures[i].classList.add('img-selected');
+            }
+        }
+    }
+    
+
 }

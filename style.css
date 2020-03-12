@@ -328,7 +328,13 @@ button.active-tag {
 }
 
 .portfolio__examples img {
-    image-rendering: crisp-edges;
+    width: 220px;
+    height: 177px;
+    box-sizing: border-box;
+}
+
+img.img-selected {
+    border: 5px solid #F06C64;
 }
 
 .about-us__employees {
