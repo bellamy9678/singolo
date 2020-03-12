@@ -106,6 +106,10 @@ h5 {
     transition: 0.4s;
 }
 
+li.active a {
+    color: #f06c64;
+}
+
 .slider {
     height: 594px;
     background-color: #f06c64;
