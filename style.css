@@ -288,23 +288,33 @@ p.portfolio__description {
     display: inline-block;
 }
 
-.tags-group__list li a {
+.tags-group__list button {
     font-size: 1.2rem;
     color: #767e9e;
+    background-color: #0000;
     font-weight: 400;
     border: 1px solid #666d89;
     border-radius: 5px;
     padding: 2.5px 6.5px;
     margin-right: 8px;
-    text-decoration: none;
     text-transform: capitalize;
 }
 
+button:active, button:focus {
+    outline: none;
+}
 
-.tags-group__list li a:hover {
+
+.tags-group__list button:hover {
     color: #dedede;
     border: 1px solid #c5c5c5;
     transition: 0.4s; 
+}
+
+button.active-tag {
+    color: #dedede;
+    border: 1px solid #c5c5c5;
+    transition: 0.4s;
 }
 
 .portfolio__examples {
