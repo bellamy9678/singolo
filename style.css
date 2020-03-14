@@ -178,6 +178,45 @@ li.active a {
     transition: 0.4s;
 }
 
+#black-mirror-left, #black-mirror-right {
+    position: absolute;
+    background-color: black;
+    visibility: hidden;
+}
+
+.phone-button {
+    position: absolute;
+    background-color:#0000;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#phone-button-left {
+    top: 409px;
+    left: 88px;
+}
+
+#phone-button-right {
+    top: 88px;
+    left: 10px
+}
+
+#black-mirror-left {
+    width: 188px;
+    height: 333px;
+    top: 67px;
+    left: 16px;
+}
+
+#black-mirror-right {
+    width: 333px;
+    height: 189px;
+    top: 16px;
+    left: 62px;
+}
+
 .services {
     height: 494px;
     background-color: #f2f2f2;

@@ -58,6 +58,31 @@ window.onload = function() {
             }
         }
     }
+
+    const LEFT_MOBILE_CONTROL = document.querySelector('#phone-button-left');
+    const RIGHT_MOBILE_CONTROL = document.querySelector('#phone-button-right');
+
+    LEFT_MOBILE_CONTROL.onclick = () => {
+        const BLACK_MIRROR = document.querySelector('#black-mirror-left');
+        if (BLACK_MIRROR.style.visibility == 'unset') {
+            BLACK_MIRROR.style.visibility = 'hidden';
+        } else if (BLACK_MIRROR.style.visibility == 'hidden') {
+            BLACK_MIRROR.style.visibility = 'unset';
+        } else {
+            BLACK_MIRROR.style.visibility = 'unset';
+        }
+    }
+
+    RIGHT_MOBILE_CONTROL.onclick = () => {
+        const BLACK_MIRROR = document.querySelector('#black-mirror-right');
+        if (BLACK_MIRROR.style.visibility == 'unset') {
+            BLACK_MIRROR.style.visibility = 'hidden';
+        } else if (BLACK_MIRROR.style.visibility == 'hidden') {
+            BLACK_MIRROR.style.visibility = 'unset';
+        } else {
+            BLACK_MIRROR.style.visibility = 'unset';
+        }
+    }
     
 
 }
