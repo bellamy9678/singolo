@@ -83,6 +83,45 @@ window.onload = function() {
             BLACK_MIRROR.style.visibility = 'unset';
         }
     }
-    
 
+    const FORM = document.querySelector('#form');
+    const MODAL = document.querySelector('.modal');
+    const TEXTAREA = document.querySelector('#message');
+    
+    TEXTAREA.onchange = (event) => {
+        if (TEXTAREA.value.length > 500) {
+            event.preventDefault();
+            alert(`Description is too long (max 500 symbols)`);
+            let text = TEXTAREA.value;
+            TEXTAREA.value = text.slice(0, 501);
+        }
+    }
+    
+    FORM.onsubmit = (evt) => {
+        evt.preventDefault();
+        MODAL.style.visibility = 'unset';
+        
+        const subject = document.querySelector('#modal-window__subject');
+        const description = document.querySelector('#modal-window__description');
+
+        if (document.querySelector('#subject').value.length == 0) {
+            subject.innerText = 'Without subject';
+        } else {
+            subject.innerText = `Subject: ${document.querySelector('#subject').value}`;
+        }
+        
+        if (document.querySelector('#message').value.length == 0) {
+            description.innerText = 'Without description';
+        } else {
+            description.innerText = `Description:  ${document.querySelector('#message').value}`;
+        }
+        
+        const OK_BUTTON = document.querySelector('#modal-window__ok');
+        OK_BUTTON.onclick = () => {
+            MODAL.style.visibility = 'hidden';
+        };
+    }
+
+
+    
 }

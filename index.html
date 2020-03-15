@@ -172,7 +172,7 @@
                 nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
             </p>
             <div class="get-a-quote__contact">
-                <form action="#" class="contact-form" autocomplete="off" >
+                <form action="#" class="contact-form" autocomplete="off" id="form">
                     <input class="contact-form_input" type="text" id="name" placeholder="Name (Required)" pattern="[А-Яа-яЁё\sa-zA-Z']{2,35}" required>
                     <input class="contact-form_input" type="email" id="email" placeholder="Email (Required)" required>
                     <input class="contact-form_input" type="text" id="subject" placeholder="Subject">
@@ -189,6 +189,14 @@
                         <li class="mobile-phone"><a href="tel:035283318635">03528 331 86 35</a></li>
                         <li class="mail"><a href="mailto:info@singolo.com">info@singolo.com</a></li>
                     </ul>
+                </div>
+                <div class="modal">
+                    <div class="modal-window">
+                        <p id="modal-window__welcome-message">The letter was sent</p>
+                        <p id="modal-window__subject">Subject: </p>
+                        <p id="modal-window__description">Description: </p>
+                        <button class="modal-window__button" id="modal-window__ok">Ok</button>
+                    </div>
                 </div>
             </div>
         </div>
