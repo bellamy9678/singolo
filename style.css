@@ -1,5 +1,7 @@
 @import url("fonts.css");
 
+/******************basic******************/
+
 * {
     margin: 0;
     padding: 0;
@@ -46,6 +48,8 @@ h5 {
     overflow: hidden;
     margin-top: -1px;
 }
+
+/******************header******************/
 
 .header {
     height: 89px;
@@ -110,12 +114,17 @@ li.active a {
     color: #f06c64;
 }
 
+/******************slider******************/
+
 .slider {
-    height: 594px;
+    min-height: 594px;
+    height: 1px;
     background-color: #f06c64;
-    width: 1020px;
+    max-width: 1020px;
+    width: 100%;
     margin: 0 auto;
     border-bottom: 6px solid #ea676b;
+    position: relative;
 }
 
 .mobile {
@@ -125,13 +134,13 @@ li.active a {
 .mobile_vertical {
     position: relative;
     top: 51px;
-    left: 54px;
+    left: 110px;
 }
 
 .mobile_horizontal {
     position: relative;
     top: -71px;
-    right: -122px;
+    right: -178px;
 }
 
 .wrapper_layout-3-box {
@@ -140,48 +149,52 @@ li.active a {
     align-items: center;
 }
 
-.slider__image {
-    flex: 1;
-}
-
-.slider__control {
-    position: relative;
+.control {
+    position: absolute;
     width: 16px;
     height: 27px;
-    top: 50px;
-}
-
-.control_left {
+    cursor: pointer;
+    top: 50%;
+  }
+  
+.control-left {
+    left: 39px;
     background: url("./assets/icons/chev.png");
     background-repeat: no-repeat;
-    left: 2px;
+    transform: translateY(-50%);
 }
 
-.control_right {
+.control-right {
+    right: 39px;
     background: url("./assets/icons/chev.png");
-    transform: rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
     background-repeat: no-repeat;
 }
 
-.control_left:hover {
-    background: url("./assets/icons/chevHover.png");
-    background-repeat: no-repeat;
-    cursor: pointer;
-    transition: 0.4s;
+.control:hover {
+    transition: all 0.2s ease;
 }
 
-.control_right:hover {
+.control-left:hover {
+    background: url("./assets/icons/chevHover.png");
+    background-repeat: no-repeat;    
+}
+
+.control-right:hover {
     background: url("./assets/icons/chevHover.png");
     background-repeat: no-repeat;
-    transform: rotate(180deg);
-    cursor: pointer;
-    transition: 0.4s;
+    transform: translateY(-50%) rotate(180deg);
 }
 
 #black-mirror-left, #black-mirror-right {
     position: absolute;
     background-color: black;
-    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease-out;
+}
+
+#black-mirror-left.mirror-on, #black-mirror-right.mirror-on {
+    opacity: 1;
 }
 
 .phone-button {
@@ -216,6 +229,98 @@ li.active a {
     top: 16px;
     left: 62px;
 }
+
+/******************slider-animation******************/
+
+.carusel {
+    position: relative;
+    user-select: none;
+    height: 100%;
+  }
+  
+  /*------------------слайды------------------*/
+  
+  .slides-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  .slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .active-slide {
+    display: block;
+  }
+  
+  .image-inside {
+      display: block;
+      margin: 0 auto;
+  }
+  
+  .next-slide {
+    display: block;
+  }
+  
+  /*------------------анимация------------------*/
+  
+  @keyframes show-from-right {
+    from {
+      left: 100%;
+    }
+    to {
+      left: 0;
+    }
+  }
+  
+  @keyframes hide-to-right {
+    from {
+      left: 0;
+    }
+    to {
+      left: 100%;
+    }
+  }
+  
+  @keyframes show-from-left {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 0;
+    }
+  }
+  
+  @keyframes hide-to-left {
+    from {
+      left: 0;
+    }
+    to {
+      left: -100%;
+    }
+  }
+  
+  .show-from-right {
+    animation: show-from-right .6s;
+  }
+  
+  .hide-to-right {
+    animation: hide-to-right .6s;
+  }
+  
+  .show-from-left {
+    animation: show-from-left .6s;
+  }
+  
+  .hide-to-left {
+    animation: hide-to-left .6s;
+  }
+
+/******************services******************/
 
 .services {
     height: 494px;
@@ -301,6 +406,8 @@ p.portfolio__description {
     height: 27px;
 }
 
+/******************portfolio******************/
+
 .portfolio {
     height: 863px;
     background-color: #2d303a;
@@ -342,7 +449,6 @@ p.portfolio__description {
 button:active, button:focus {
     outline: none;
 }
-
 
 .tags-group__list button:hover {
     color: #dedede;
@@ -477,6 +583,8 @@ img.img-selected {
     background-size: auto 14px;
 }
 
+/******************get-a-quote******************/
+
 .get-a-quote {
     height: 648px;
     background-color: #f06c64;
@@ -607,6 +715,8 @@ h3.contact_header {
     background-position: -1px 8px;
 }
 
+/******************footer******************/
+
 .footer {
     height: 77px;
     background-color: #2d303a;
@@ -634,6 +744,8 @@ h3.contact_header {
     margin: 0;
 }
 
+/******************modal******************/
+
 .modal {
     height: 100vh;
     width: 100vw;
@@ -645,7 +757,6 @@ h3.contact_header {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 0.3s ease;
     visibility: hidden;
 }
 
