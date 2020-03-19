@@ -478,7 +478,7 @@ button.active-tag {
   height: 177px;
   box-sizing: border-box;
   transition: all 0.1s ease-in;
-  border: 0 solid #f06c64;;
+  border: 0 solid #f06c64;
 }
 
 img.img-selected {
@@ -761,32 +761,50 @@ h3.contact_header {
   align-items: center;
   justify-content: center;
   visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s;
 }
 
 .modal-window {
   display: flex;
   background-color: #f2f2f2;
+  min-width: 300px;
   max-width: 30%;
-  max-height: 50%;
+  min-height: 144px;
+  box-sizing: border-box;
+  max-height: 90%;
   flex-direction: column;
-  min-width: 320px;
-  min-height: fit-content;
   padding: 10px;
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 8px;
+  word-break: break-all;
+}
+
+#modal-window__welcome-message, #modal-window__subject {
+  min-height: fit-content;
 }
 
 .modal-window__button {
-  background-color: #f0d8d9;
+  color: #f0d8d9;
+  background-color: #767e9e;
   cursor: pointer;
-  color: #767e9e;
   margin-top: 7px;
+  padding: 4px;
   border: none;
-  height: 2.2rem;
+  line-height: 2.2rem;
   border-radius: 5px;
+  transition: all 0.2s;
+}
+
+#modal-window__description {
+  overflow: overlay;
 }
 
 .modal-window__button:hover {
-  color: #f0d8d9;
-  background-color: #767e9e;
+  background-color: #f0d8d9;
+  color: #767e9e;
+}
+
+.visible {
+  opacity: 1;
 }

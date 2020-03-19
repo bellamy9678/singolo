@@ -113,6 +113,7 @@ window.onload = function() {
   FORM.onsubmit = evt => {
     evt.preventDefault();
     MODAL.style.visibility = "unset";
+    MODAL.classList.add('visible');
 
     const subject = document.querySelector("#modal-window__subject");
     const description = document.querySelector("#modal-window__description");
@@ -135,6 +136,8 @@ window.onload = function() {
 
     const OK_BUTTON = document.querySelector("#modal-window__ok");
     OK_BUTTON.onclick = () => {
+      FORM.reset();
+      MODAL.classList.remove('visible');
       MODAL.style.visibility = "hidden";
     };
   };

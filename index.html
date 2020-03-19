@@ -228,20 +228,23 @@
               type="text"
               id="name"
               placeholder="Name (Required)"
-              pattern="[А-Яа-яЁё\sa-zA-Z']{2,35}"
+			  pattern="[А-Яа-яЁё\sa-zA-Z']{2,50}"
+			  maxlength="50"
               required
             />
             <input
               class="contact-form_input"
               type="email"
               id="email"
-              placeholder="Email (Required)"
+			  placeholder="Email (Required)"
+			  maxlength="70"
               required
             />
             <input
               class="contact-form_input"
               type="text"
-              id="subject"
+			  id="subject"
+			  maxlength="70"
               placeholder="Subject"
             />
             <textarea
