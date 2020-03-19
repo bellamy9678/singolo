@@ -59,11 +59,15 @@ window.onload = function() {
 
   function setHandlerOnPortfolio() {
     for (let i = 0; i < PICTURES.length; i++) {
-      PICTURES[i].onclick = () => {
-        for (let j = 0; j < PICTURES.length; j++) {
-          PICTURES[j].classList.remove("img-selected");
+      PICTURES[i].onclick = function() {
+        if (this.classList.contains("img-selected")) {
+          this.classList.remove("img-selected");
+        } else {
+          for (let j = 0; j < PICTURES.length; j++) {
+            PICTURES[j].classList.remove("img-selected");
+          }
+          this.classList.add("img-selected");
         }
-        PICTURES[i].classList.add("img-selected");
       };
     }
   }

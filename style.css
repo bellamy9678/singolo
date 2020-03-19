@@ -478,6 +478,7 @@ button.active-tag {
   height: 177px;
   box-sizing: border-box;
   transition: all 0.1s ease-in;
+  border: 0 solid #f06c64;;
 }
 
 img.img-selected {
