@@ -10,12 +10,15 @@
 html {
   font-size: 10px;
   font-family: "Lato", Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0 auto;
   font-size: 1.6rem;
   letter-spacing: -0.02rem;
+  scroll-behavior: smooth;
+  padding-top: 95px;
 }
 
 .wrapper {
@@ -59,8 +62,11 @@ h5 {
   display: flex;
   align-items: center;
   font-weight: 700;
-  width: 1020px;
+  width: 100%;
   margin: 0 auto;
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }
 
 .layout-2-box {
@@ -103,14 +109,14 @@ h5 {
   font-size: 1.2rem;
   font-weight: 700;
   color: #ffffff;
+  transition: 0.2s all;
 }
 
 .options__menu li a:hover {
   color: #f06c64;
-  transition: 0.4s;
 }
 
-li.active a {
+.options__menu li a.active {
   color: #f06c64;
 }
 
