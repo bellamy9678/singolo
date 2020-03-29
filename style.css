@@ -461,7 +461,7 @@ h2.portfolio__header {
 
 @media screen and (max-width: 767px) {
   .services_options {
-    padding: 25px 0 26px 0;
+    padding: 26px 14px 26px 0;
   }
 
   p.services__description {
@@ -474,7 +474,17 @@ h2.portfolio__header {
 
   .services__option {
     padding-bottom: 34px;
+    width: 100%;
+    max-width: 315px;
   }
+
+  .services__option {
+    display: flex;
+    justify-content: space-between;
+    height: 86px;
+    padding: 0 0 34px;
+  }
+
   .services_options :last-child {
     padding-bottom: 0;
   }
@@ -482,6 +492,13 @@ h2.portfolio__header {
     align-items: center;
     flex-direction: column;
   }
+}
+
+@media screen and (max-width: 370px) {
+  .option__description {
+    width: 100%;
+    padding-left: 20px;
+}
 }
 
 /******************portfolio******************/
@@ -588,13 +605,20 @@ img.img-selected {
   .portfolio__examples {
     grid-template-columns: 1fr 1fr;
     grid-gap: 13px;
-    max-height: calc(4 * 34.5vw + 3 * 13px);
+    max-height: calc(4 * 34vw + 3 * 13px);
   }
 
   .portfolio__examples img {
-    height: 34.5vw;
+    height: 34vw;
   }
 }
+
+@media screen and (max-width: 370px) {
+  .tags-group__list button {
+    margin: 3px;
+  }
+}
+
 
 /******************about-us******************/
 .about-us {
@@ -677,6 +701,21 @@ p.about-us__description {
   h2.about-us__header {
     padding-top: 33px;
   }
+
+  .about-us__employee h3 {
+    margin-top: 14px;
+}
+
+  p.about-us__description {
+    letter-spacing: 0.01rem;
+}
+
+.about-us__employees {
+  padding: 23px 0 93px;
+  grid-gap: 2.2%;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: none;
+}
   
 }
 
@@ -764,7 +803,7 @@ p.get-a-quote__decription {
   font-size: 1.2rem;
   color: #f48c8f;
   font-weight: 400;
-  padding-left: 15px;
+  padding: 0 15px;
 }
 
 .contact-form_input::placeholder {
@@ -857,10 +896,60 @@ h3.contact_header {
     grid-gap: 11px;
   }
 
+  .contact-form_input {
+    padding: 0 10px;
+  }
+
   .contact-form textarea {
     height: 151px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  
+  h2.get-a-quote__header {
+    padding-top: 44px;
+}
+p.get-a-quote__decription {
+  letter-spacing: 0.01rem;
+}
+.get-a-quote__contact {
+  grid-template-columns: 1fr;
+  padding: 24px 0 34px;
+  grid-gap: 20px;
+}
+
+.contact_description {
+  padding-top: 0;
+
+}
+
+.contact-form_input {
+  padding: 0 7px;
+}
+.contact-form_submit {
+  width: 100%;
+}
+
+.contact__information {
+  margin-left: 0;
+  padding-top: 15px;
+}
+
+.contact__methods {
+  margin-top: 10px;
+}
+
+.contact__methods li {
+  margin-top: 3px;
+}
+
+input.contact-form_submit {
+  height: 50px;
+}
+
+}
+
 
 .pinup {
   background: url("assets/icons/pinup.svg") no-repeat;
@@ -909,6 +998,19 @@ h3.contact_header {
 .footer_social-media-group a {
   margin: 0;
 }
+
+
+@media screen and (max-width: 767px) {
+  .footer-container h5 {
+    display: none;
+  }
+
+  .footer_social-media-group {
+    margin: 0 auto;
+  }
+
+}
+
 
 /******************modal******************/
 
