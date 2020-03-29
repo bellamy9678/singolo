@@ -140,12 +140,12 @@ h5 {
 }
 
 .blur-background {
- position: absolute;
+  position: absolute;
   height: 100vh;
   width: 100vw;
   top: 0;
   left: 0;
-  background: #2D303A;
+  background: #2d303a;
   opacity: 0.6;
 }
 
@@ -197,7 +197,7 @@ h5 {
   height: 100%;
   left: 0;
   top: 0;
-  background: #2D303A;
+  background: #2d303a;
   box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
   z-index: 5;
 }
@@ -218,8 +218,8 @@ h5 {
 
 .logo-mobile {
   left: 71px;
-    position: fixed;
-    top: 24px;
+  position: fixed;
+  top: 24px;
 }
 
 .burger-open {
@@ -247,13 +247,13 @@ h5 {
 .mobile_vertical {
   position: relative;
   top: 51px;
-  left: 110px;
+  left: -33px;
 }
 
 .mobile_horizontal {
   position: relative;
   top: -71px;
-  right: -178px;
+  right: -34px;
 }
 
 .wrapper_layout-3-box {
@@ -304,7 +304,7 @@ h5 {
   position: absolute;
   background-color: black;
   opacity: 0;
-  transition: all 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
 }
 
 #black-mirror-left.mirror-on,
@@ -345,6 +345,124 @@ h5 {
   left: 62px;
 }
 
+.slide img {
+  width: 100%;
+}
+
+.mobiles {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+#blue-mobiles {
+  height: 100%;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+@media screen and (max-width: 1019px) {
+  .slider {
+    min-height: 446px;
+  }
+
+  .mobile_vertical {
+    width: 182px;
+    top: 40px;
+  }
+
+  .mobile_horizontal {
+    width: 366px;
+    top: -50px;
+  }
+
+  #black-mirror-left {
+    width: 141px;
+    height: 250px;
+    top: 50px;
+    left: 12px;
+  }
+  
+  #black-mirror-right {
+    width: 251px;
+    height: 142px;
+    top: 12px;
+    left: 46px;
+  }
+  .phone-button {
+    width: 32px;
+    height: 32px;
+  }
+
+  #phone-button-left {
+    top: 307px;
+    left: 67px;
+  }
+
+  #phone-button-right {
+    top: 66px;
+    left: 8px;
+  }
+  
+}
+
+
+@media screen and (max-width: 767px) {
+  .control-left {
+    left: 9px;
+}
+
+.control-right {
+  right: 9px;
+}
+  
+  .slider {
+    min-height: 214px;
+  }
+
+  .mobile_vertical {
+    left: -13px;
+    top: 20px;
+    width: 89px;
+  }
+
+  .mobile_horizontal {
+    width: 178px;
+    top: -24px;
+    right: -11px;
+  }
+
+  #black-mirror-left {
+    width: 69px;
+    height: 123px;
+    top: 24px;
+    left: 6px;
+  }
+  
+  #black-mirror-right {
+    width: 122px;
+    height: 69px;
+    top: 6px;
+    left: 22px;
+  }
+  .phone-button {
+    width: 15px;
+    height: 15px;
+  }
+
+  #phone-button-left {
+    top: 150px;
+    left: 32px;
+  }
+
+  #phone-button-right {
+    top: 32px;
+    left: 4px;
+  }
+  
+}
+
+
 /******************slider-animation******************/
 
 .carusel {
@@ -366,6 +484,7 @@ h5 {
   display: none;
   position: absolute;
   width: 100%;
+  height: 100%;
 }
 
 .active-slide {
@@ -512,8 +631,6 @@ h2.portfolio__header {
   .services__option {
     padding-bottom: 58px;
   }
-
-  
 }
 
 @media screen and (max-width: 767px) {
@@ -555,7 +672,7 @@ h2.portfolio__header {
   .option__description {
     width: 100%;
     padding-left: 20px;
-}
+  }
 }
 
 /******************portfolio******************/
@@ -647,7 +764,6 @@ img.img-selected {
   .portfolio__examples img {
     height: 24vw;
   }
-  
 }
 
 @media screen and (max-width: 767px) {
@@ -675,7 +791,6 @@ img.img-selected {
     margin: 3px;
   }
 }
-
 
 /******************about-us******************/
 .about-us {
@@ -761,19 +876,18 @@ p.about-us__description {
 
   .about-us__employee h3 {
     margin-top: 14px;
-}
+  }
 
   p.about-us__description {
     letter-spacing: 0.01rem;
-}
+  }
 
-.about-us__employees {
-  padding: 23px 0 93px;
-  grid-gap: 2.2%;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: none;
-}
-  
+  .about-us__employees {
+    padding: 23px 0 93px;
+    grid-gap: 2.2%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: none;
+  }
 }
 
 .facebook {
@@ -963,50 +1077,46 @@ h3.contact_header {
 }
 
 @media screen and (max-width: 767px) {
-  
   h2.get-a-quote__header {
     padding-top: 44px;
-}
-p.get-a-quote__decription {
-  letter-spacing: 0.01rem;
-}
-.get-a-quote__contact {
-  grid-template-columns: 1fr;
-  padding: 24px 0 34px;
-  grid-gap: 20px;
-}
+  }
+  p.get-a-quote__decription {
+    letter-spacing: 0.01rem;
+  }
+  .get-a-quote__contact {
+    grid-template-columns: 1fr;
+    padding: 24px 0 34px;
+    grid-gap: 20px;
+  }
 
-.contact_description {
-  padding-top: 0;
+  .contact_description {
+    padding-top: 0;
+  }
 
-}
+  .contact-form_input {
+    padding: 0 7px;
+  }
+  .contact-form_submit {
+    width: 100%;
+  }
 
-.contact-form_input {
-  padding: 0 7px;
-}
-.contact-form_submit {
-  width: 100%;
-}
+  .contact__information {
+    margin-left: 0;
+    padding-top: 15px;
+  }
 
-.contact__information {
-  margin-left: 0;
-  padding-top: 15px;
-}
+  .contact__methods {
+    margin-top: 10px;
+  }
 
-.contact__methods {
-  margin-top: 10px;
-}
+  .contact__methods li {
+    margin-top: 3px;
+  }
 
-.contact__methods li {
-  margin-top: 3px;
+  input.contact-form_submit {
+    height: 50px;
+  }
 }
-
-input.contact-form_submit {
-  height: 50px;
-}
-
-}
-
 
 .pinup {
   background: url("assets/icons/pinup.svg") no-repeat;
@@ -1056,7 +1166,6 @@ input.contact-form_submit {
   margin: 0;
 }
 
-
 @media screen and (max-width: 767px) {
   .footer-container h5 {
     display: none;
@@ -1065,9 +1174,7 @@ input.contact-form_submit {
   .footer_social-media-group {
     margin: 0 auto;
   }
-
 }
-
 
 /******************modal******************/
 
